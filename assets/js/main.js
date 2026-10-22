@@ -2,8 +2,8 @@
 
 // ---- Business details: edit these in one place ----
 const SITE = {
-  whatsapp: "+91 9998369070", // country code + number (spaces/+ are fine)
-  email: "info@shubhamconsultancy.com",
+  phone: "+91 9998369070", // country code + number (spaces/+ are fine)
+  email: "info@shubhamconsultancy.in",
 };
 
 (function () {
@@ -60,12 +60,17 @@ const SITE = {
   }
 
   // ---- WhatsApp / email links ----
-  const waNumber = SITE.whatsapp.replace(/\D/g, "");
+  const phoneNumber = SITE.phone.replace(/\D/g, "");
+  const waNumber = phoneNumber;
   const waUrl = (text) => `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
   document.querySelectorAll("[data-wa]").forEach((a) => {
     a.href = waUrl(a.dataset.wa || "Hi Shubham Consultancy, I'd like to know more about your services.");
     a.target = "_blank";
     a.rel = "noopener";
+  });
+  document.querySelectorAll("[data-phone]").forEach((a) => {
+    a.href = `tel:+${phoneNumber}`;
+    a.textContent = `Call ${SITE.phone}`;
   });
   document.querySelectorAll("[data-email]").forEach((a) => {
     a.href = `mailto:${SITE.email}`;

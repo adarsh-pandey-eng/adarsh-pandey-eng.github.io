@@ -15,7 +15,7 @@ https://adarsh-pandey-eng.github.io. The `.nojekyll` file tells GitHub to serve 
 
 ## Editing
 
-- **Phone / email:** change `SITE` at the top of `assets/js/main.js`.
+- **Phone / email:** change `SITE` at the top of `assets/js/main.js`. The phone number is used for both calls and WhatsApp.
 - **Services:** edit the cards in the `#services` section of `index.html`.
 - The header and footer are repeated in each HTML file, so update them in every file.
 
